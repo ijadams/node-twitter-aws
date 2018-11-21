@@ -9,8 +9,6 @@ var client = new Twitter({
   access_token_key: process.env.TWITTER_ACCESS_TOKEN,
   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
-console.log(process.cwd(), '.env');
-console.log(process.env.TWITTER_CONSUMER_KEY);
 
 var params = {screen_name: 'elonmusk'};
 client.get('statuses/user_timeline', params, function(error, tweets, response) {
